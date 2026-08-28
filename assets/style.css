@@ -376,7 +376,7 @@ section.tight{padding:64px 0;}
 .plan-card.featured .tier{color:var(--signal);}
 
 /* ---------- Founder ---------- */
-.founder-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:56px; align-items:center;}
+.founder-grid{display:grid; grid-template-columns:0.55fr 1.45fr; gap:56px; align-items:center;}
 @media (max-width:860px){.founder-grid{grid-template-columns:1fr;}}
 .founder-portrait{
   aspect-ratio:4/5; border-radius:3px; border:1px solid var(--line);
