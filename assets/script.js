@@ -20,17 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* Method rail — click a step to highlight it (accordion-style emphasis) */
-  document.querySelectorAll('[data-accordion]').forEach(function (rail) {
-    var steps = rail.querySelectorAll('.method-step');
-    steps.forEach(function (step) {
-      step.addEventListener('click', function () {
-        steps.forEach(function (s) { s.classList.remove('active'); });
-        step.classList.add('active');
-      });
-    });
-  });
-
   /* Footer year */
   document.querySelectorAll('[data-year]').forEach(function (el) {
     el.textContent = new Date().getFullYear();
