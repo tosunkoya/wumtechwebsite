@@ -55,27 +55,26 @@ Follow your chosen host's domain-connection instructions; the process above does
 
 ## Connecting real functionality (this ships as a working demo)
 
-The site works out of the box, but three things are demo-only and should be
-connected to real services before you rely on it for revenue:
+**Update (integration with the live diagnostic app):** `score.html`, `index.html`'s embedded
+free-score form, and `90-day-plan.html` now hand off to the real Wumtech AI Visibility
+Diagnostic app instead of running a fake demo. Each has a small inline script near the bottom
+of the file that reads `WUMTECH_APP_URL` (currently set to `https://diagnostic.wumtechconsult.com`)
+and redirects there with the entered details as query parameters. **If you ever move the app to
+a different subdomain, update that one constant in all three files** — search for
+`WUMTECH_APP_URL` across the project.
+
+The contact form below is still demo-only and not yet connected to anything.
 
 ### 1. The Free AI Visibility Score (`score.html`, `index.html`)
-Currently generates an illustrative score client-side in `assets/script.js`
-(`runScoreDemo` logic inside the `score-form` submit handler) so visitors see
-an instant, personalized-feeling result.
-
-To make it a real diagnostic:
-- Replace the score-generation block with a `fetch()` call to your own scoring
-  API (one you build, or a no-code backend like Airtable + a serverless function).
-- That backend should actually check the submitted website, Google Business
-  Profile, and directory listings.
+Now redirects to the real app instead of running a fake demo. The old client-side score
+simulator has been removed from `assets/script.js` entirely (it's no longer just dead code —
+it's gone).
 
 ### 2. The $49 checkout (`90-day-plan.html`)
-The email field currently just shows a placeholder message. To accept real
-payment:
-- Create a [Stripe Payment Link](https://dashboard.stripe.com/payment-links) for
-  the $49 product and swap the `<form>` for a link/button pointing to it, **or**
-- Use Stripe Checkout via a small serverless function (Vercel/Netlify Functions,
-  Cloudflare Workers) if you want the current on-page form kept.
+~~The email field currently just shows a placeholder message.~~ — now redirects to the app,
+where the real Stripe Checkout flow lives. The email collected here isn't used by the app yet
+(the app collects its own business profile before checkout) — it's passed through as a query
+parameter in case you want to wire up email capture on the app side later.
 
 ### 3. Contact form (`contact.html`) and lead capture
 Both currently show a "thanks, this doesn't send anywhere yet" message. Easiest

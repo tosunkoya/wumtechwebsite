@@ -55,7 +55,7 @@
           <p class="small-print">Your results are an illustrative estimate built for this demo site. To power this with a real, live diagnostic — pulling actual data from search, directories and AI-query behavior — connect a backend as described in <strong>README.md</strong>.</p>
         </div>
         <div class="lead-form">
-          <form id="score-form" novalidate>
+          <form id="wumtech-score-form" novalidate>
             <div class="field">
               <label for="biz-name">Business name</label>
               <input type="text" id="biz-name" name="biz-name" placeholder="Acme Photography" required>
@@ -104,5 +104,22 @@
 </footer>
 
 <script src="assets/script.js"></script>
+<script>
+(function () {
+  var WUMTECH_APP_URL = 'https://diagnostic.wumtechconsult.com';
+  var form = document.getElementById('wumtech-score-form');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var params = new URLSearchParams({
+      name: document.getElementById('biz-name').value.trim(),
+      website: document.getElementById('biz-website').value.trim(),
+      city: document.getElementById('biz-city').value.trim(),
+      industry: document.getElementById('biz-industry').value.trim(),
+    });
+    window.location.href = WUMTECH_APP_URL + '/?' + params.toString();
+  });
+})();
+</script>
 </body>
 </html>
