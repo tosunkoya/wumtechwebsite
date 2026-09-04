@@ -1,10 +1,23 @@
-# Wumtech — Website (Phase 1)
+# Wumtech — Website
 
-A static website for Wumtech's AI Visibility funnel: homepage, AI Visibility page,
-free Score tool, $49 90-Day Plan offer, About, Contact, Privacy and Terms.
-
-Plain HTML/CSS/JS — **no build step, no framework, no server required.**
+A static website for Wumtech — no build step, no framework, no server required.
 That means it can be deployed to literally any static web host.
+
+## Design system (v4)
+
+Full-screen dark theme: deep blue-black background (`#05010e`), off-white
+foreground, a single indigo→purple→amber gradient used as the brand accent.
+Headline font is General Sans (Fontshare), body font is Geist Sans
+(fontsource via jsDelivr), data/mono readouts stay in IBM Plex Mono.
+
+### About the homepage hero video
+
+`assets/video/hero-bg.mp4` is an **original placeholder** — a slow ambient
+indigo/purple/amber glow generated for this project, not stock footage.
+Swap in your own video at that same path whenever you have one; the
+fade-in/fade-out loop in `assets/script.js` (search for "Hero background
+video") will work with any `.mp4` you drop in, no code changes needed.
+
 
 ## What's in here
 
