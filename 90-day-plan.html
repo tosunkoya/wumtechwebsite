@@ -15,15 +15,47 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a href="index.html" class="brand"><img src="assets/images/wumtech-icon.png" alt="Wumtech logo" class="brand-mark"><span class="brand-text">WUMTECH<span>AI · DATA · VISIBILITY</span></span></a>
+    <a href="index.html" class="brand"><img src="assets/images/wumtech-icon.png" alt="Wumtech logo" class="brand-mark"><span class="brand-text">WUMTECH<span>AI · DATA · ANALYTICS · EDUCATION</span></span></a>
     <nav class="nav-links" id="nav-links">
-      <a href="ai-visibility.html">AI Visibility</a>
-      <a href="score.html">Free Score</a>
-      <a href="90-day-plan.html" class="active">90-Day Plan</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <div class="nav-item">
+        <a href="index.html#solutions">Solutions <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="index.html#solutions">AI &amp; Data Transformation</a>
+          <a href="index.html#solutions">Analytics &amp; BI</a>
+          <a href="index.html#solutions">Data Modernization</a>
+          <a href="index.html#solutions">AI Solutions</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="healthcare-analytics.html">Academy <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="healthcare-analytics.html">Healthcare Analytics</a>
+          <a href="healthcare-analytics.html#masterclasses">Masterclasses</a>
+          <a href="simulation.html">Simulations</a>
+          <a href="healthcare-analytics.html#career">Career Accelerator</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="ai-visibility.html" class="active">AI Visibility <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="score.html">AI Visibility Score</a>
+          <a href="90-day-plan.html">90-Day Plan</a>
+          <a href="contact.html">Growth</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="about.html">About <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="about.html">Dr. Toyin Joseph</a>
+          <a href="about.html">Wumtech</a>
+          <a href="contact.html">Speaking</a>
+        </div>
+      </div>
+      <a href="insights.html">Insights</a>
+      <a href="index.html#choose-path" class="btn btn-primary btn-sm">Start Here</a>
     </nav>
     <div class="nav-cta">
+      <a href="index.html#choose-path" class="btn btn-primary btn-sm">Start Here</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -58,14 +90,14 @@
         <div class="offer-right">
           <div class="tier" style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; color:var(--text-faint); margin-bottom:6px;">ONE-TIME PAYMENT</div>
           <div class="price-tag">$49</div>
-          <form id="wumtech-plan-form">
+          <form data-demo-form>
             <div class="field">
               <label for="plan-email">Email</label>
               <input type="email" id="plan-email" name="plan-email" placeholder="you@business.com" required>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Get My $49 Plan →</button>
           </form>
-          <p class="small-print" style="margin-top:14px;">You'll fill in your business details and check out securely on the next step.</p>
+          <p class="small-print" style="margin-top:14px;">Checkout is a placeholder in this demo. Connect Stripe Checkout or Stripe Payment Links here to accept real payments — see README.md.</p>
         </div>
       </div>
     </div>
@@ -118,18 +150,5 @@
 </footer>
 
 <script src="assets/script.js"></script>
-<script>
-(function () {
-  var WUMTECH_APP_URL = 'https://diagnostic.wumtechconsult.com';
-  var form = document.getElementById('wumtech-plan-form');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = document.getElementById('plan-email').value.trim();
-    var params = new URLSearchParams({ email: email, buy: '1' });
-    window.location.href = WUMTECH_APP_URL + '/?' + params.toString();
-  });
-})();
-</script>
 </body>
 </html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulation — Your First Day as a Healthcare Data Analyst — Wumtech Academy</title>
+<meta name="description" content="An original healthcare analytics simulation using the fictional Wumtech Health Network and synthetic patient data. No real patient data or PHI is used.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/images/favicon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand"><img src="assets/images/wumtech-icon.png" alt="Wumtech logo" class="brand-mark"><span class="brand-text">WUMTECH<span>AI · DATA · ANALYTICS · EDUCATION</span></span></a>
+    <nav class="nav-links" id="nav-links">
+      <div class="nav-item">
+        <a href="index.html#solutions">Solutions <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="index.html#solutions">AI &amp; Data Transformation</a>
+          <a href="index.html#solutions">Analytics &amp; BI</a>
+          <a href="index.html#solutions">Data Modernization</a>
+          <a href="index.html#solutions">AI Solutions</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="healthcare-analytics.html">Academy <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="healthcare-analytics.html">Healthcare Analytics</a>
+          <a href="healthcare-analytics.html#masterclasses">Masterclasses</a>
+          <a href="simulation.html" class="active">Simulations</a>
+          <a href="healthcare-analytics.html#career">Career Accelerator</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="ai-visibility.html">AI Visibility <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="score.html">AI Visibility Score</a>
+          <a href="90-day-plan.html">90-Day Plan</a>
+          <a href="contact.html">Growth</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="about.html">About <span class="caret">▾</span></a>
+        <div class="dropdown">
+          <a href="about.html">Dr. Toyin Joseph</a>
+          <a href="about.html">Wumtech</a>
+          <a href="contact.html">Speaking</a>
+        </div>
+      </div>
+      <a href="insights.html">Insights</a>
+      <a href="index.html#choose-path" class="btn btn-primary btn-sm">Start Here</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="index.html#choose-path" class="btn btn-primary btn-sm">Start Here</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero scanfield tight">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Academy / Simulation</div>
+      <div class="eyebrow">WUMTECH ACADEMY · SIMULATION</div>
+      <h1>Your First Day as a Healthcare Data Analyst</h1>
+      <p class="lede">An original Wumtech simulation using a fictional health network and synthetic data. No real patient data or PHI is used anywhere in this environment.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="ehr-shell">
+        <div class="ehr-topbar">
+          <span class="org">WUMTECH HEALTH NETWORK</span>
+          <span class="user">Analyst: You · Synthetic data only</span>
+        </div>
+        <div class="ehr-body">
+          <div class="ehr-sidebar">
+            <div class="ehr-nav-item active" data-panel="dashboard">Dashboard</div>
+            <div class="ehr-nav-item" data-panel="patients">Patients</div>
+            <div class="ehr-nav-item" data-panel="encounters">Encounters</div>
+            <div class="ehr-nav-item" data-panel="labs">Labs</div>
+            <div class="ehr-nav-item" data-panel="medications">Medications</div>
+            <div class="ehr-nav-item" data-panel="diagnoses">Diagnoses</div>
+            <div class="ehr-nav-item" data-panel="providers">Providers</div>
+            <div class="ehr-nav-item" data-panel="departments">Departments</div>
+            <div class="ehr-nav-item" data-panel="analytics">Analytics</div>
+            <div class="ehr-nav-item" data-panel="assignments">Assignments</div>
+          </div>
+
+          <div class="ehr-content">
+
+            <!-- DASHBOARD -->
+            <div class="ehr-panel active" data-panel="dashboard">
+              <h3>Network Overview</h3>
+              <div class="panel-sub">Synthetic data · Wumtech Health Network · last 7 days</div>
+              <div class="metric-grid">
+                <div class="metric-card"><div class="m-label">Patients</div><div class="m-value">1,842</div></div>
+                <div class="metric-card"><div class="m-label">Encounters</div><div class="m-value">2,905</div></div>
+                <div class="metric-card"><div class="m-label">Avg. ED Wait</div><div class="m-value">54m</div><div class="m-delta up">↑ 18%</div></div>
+                <div class="metric-card"><div class="m-label">Admissions</div><div class="m-value">311</div></div>
+              </div>
+              <div class="alert-banner" style="margin-top:24px;">
+                <span class="icon">🚨</span>
+                <div><strong>ED wait times up 18% this week</strong><span>Leadership has asked Analytics to investigate. See Assignments.</span></div>
+              </div>
+            </div>
+
+            <!-- PATIENTS -->
+            <div class="ehr-panel" data-panel="patients">
+              <h3>Patients</h3>
+              <div class="panel-sub">Synthetic patient roster — search and profile view</div>
+              <table class="dept-table">
+                <thead><tr><th>MRN</th><th>Name</th><th>Age</th><th>Sex</th><th>Department</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="MRN">SYN-10234</td><td data-label="Name">R. Alvarez</td><td data-label="Age">41</td><td data-label="Sex">F</td><td data-label="Dept">Emergency</td><td data-label="Status">Waiting</td></tr>
+                  <tr><td data-label="MRN">SYN-10891</td><td data-label="Name">J. Mensah</td><td data-label="Age">67</td><td data-label="Sex">M</td><td data-label="Dept">Cardiology</td><td data-label="Status">Admitted</td></tr>
+                  <tr><td data-label="MRN">SYN-11002</td><td data-label="Name">P. Nguyen</td><td data-label="Age">29</td><td data-label="Sex">F</td><td data-label="Dept">Emergency</td><td data-label="Status">In Treatment</td></tr>
+                  <tr><td data-label="MRN">SYN-11187</td><td data-label="Name">D. Okafor</td><td data-label="Age">54</td><td data-label="Sex">M</td><td data-label="Dept">Orthopedics</td><td data-label="Status">Discharged</td></tr>
+                </tbody>
+              </table>
+              <hr class="hair">
+              <h3 style="font-size:16px;">Patient Profile — SYN-10234</h3>
+              <div class="panel-sub">Clinical timeline (synthetic)</div>
+              <ul class="spec-list">
+                <li><span>Arrival</span><span>08:14 — Emergency</span></li>
+                <li><span>Triage</span><span>08:31 — ESI Level 3</span></li>
+                <li><span>Vitals</span><span>HR 92 · BP 128/82 · Temp 98.9°F</span></li>
+                <li><span>Labs ordered</span><span>CBC, BMP</span></li>
+                <li><span>Provider seen</span><span>09:48 — Dr. R. Falade</span></li>
+              </ul>
+            </div>
+
+            <!-- ENCOUNTERS -->
+            <div class="ehr-panel" data-panel="encounters">
+              <h3>Encounters</h3>
+              <div class="panel-sub">Synthetic encounter log</div>
+              <table class="dept-table">
+                <thead><tr><th>Encounter ID</th><th>MRN</th><th>Type</th><th>Department</th><th>Arrival</th><th>Wait</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="ID">ENC-88213</td><td data-label="MRN">SYN-10234</td><td data-label="Type">ED Visit</td><td data-label="Dept">Emergency</td><td data-label="Arrival">08:14</td><td data-label="Wait" class="flag">77m</td></tr>
+                  <tr><td data-label="ID">ENC-88214</td><td data-label="MRN">SYN-11002</td><td data-label="Type">ED Visit</td><td data-label="Dept">Emergency</td><td data-label="Arrival">09:02</td><td data-label="Wait" class="flag">64m</td></tr>
+                  <tr><td data-label="ID">ENC-88219</td><td data-label="MRN">SYN-10891</td><td data-label="Type">Inpatient</td><td data-label="Dept">Cardiology</td><td data-label="Arrival">07:40</td><td data-label="Wait">18m</td></tr>
+                  <tr><td data-label="ID">ENC-88231</td><td data-label="MRN">SYN-11187</td><td data-label="Type">Outpatient</td><td data-label="Dept">Orthopedics</td><td data-label="Arrival">10:15</td><td data-label="Wait">12m</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- LABS -->
+            <div class="ehr-panel" data-panel="labs">
+              <h3>Labs</h3>
+              <div class="panel-sub">Synthetic lab orders</div>
+              <table class="dept-table">
+                <thead><tr><th>Order ID</th><th>MRN</th><th>Test</th><th>Status</th><th>Ordered</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="ID">LAB-5521</td><td data-label="MRN">SYN-10234</td><td data-label="Test">CBC</td><td data-label="Status">Pending</td><td data-label="Ordered">08:35</td></tr>
+                  <tr><td data-label="ID">LAB-5522</td><td data-label="MRN">SYN-10234</td><td data-label="Test">BMP</td><td data-label="Status">Pending</td><td data-label="Ordered">08:35</td></tr>
+                  <tr><td data-label="ID">LAB-5498</td><td data-label="MRN">SYN-10891</td><td data-label="Test">Troponin</td><td data-label="Status">Complete</td><td data-label="Ordered">07:55</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- MEDICATIONS -->
+            <div class="ehr-panel" data-panel="medications">
+              <h3>Medications</h3>
+              <div class="panel-sub">Synthetic medication orders</div>
+              <table class="dept-table">
+                <thead><tr><th>MRN</th><th>Medication</th><th>Dose</th><th>Route</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="MRN">SYN-10891</td><td data-label="Med">Aspirin</td><td data-label="Dose">81mg</td><td data-label="Route">PO</td><td data-label="Status">Administered</td></tr>
+                  <tr><td data-label="MRN">SYN-11002</td><td data-label="Med">Ibuprofen</td><td data-label="Dose">400mg</td><td data-label="Route">PO</td><td data-label="Status">Administered</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- DIAGNOSES -->
+            <div class="ehr-panel" data-panel="diagnoses">
+              <h3>Diagnoses</h3>
+              <div class="panel-sub">Synthetic coded diagnoses</div>
+              <table class="dept-table">
+                <thead><tr><th>MRN</th><th>Code</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="MRN">SYN-10891</td><td data-label="Code">I20.9</td><td data-label="Desc">Angina, unspecified</td></tr>
+                  <tr><td data-label="MRN">SYN-11187</td><td data-label="Code">S93.4</td><td data-label="Desc">Sprain of ankle</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- PROVIDERS -->
+            <div class="ehr-panel" data-panel="providers">
+              <h3>Providers</h3>
+              <div class="panel-sub">Synthetic provider roster</div>
+              <table class="dept-table">
+                <thead><tr><th>Provider</th><th>Department</th><th>Role</th><th>Active Patients</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Provider">Dr. R. Falade</td><td data-label="Dept">Emergency</td><td data-label="Role">Attending</td><td data-label="Active">9</td></tr>
+                  <tr><td data-label="Provider">Dr. S. Kim</td><td data-label="Dept">Cardiology</td><td data-label="Role">Attending</td><td data-label="Active">6</td></tr>
+                  <tr><td data-label="Provider">Dr. A. Byrne</td><td data-label="Dept">Emergency</td><td data-label="Role">Resident</td><td data-label="Active">7</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- DEPARTMENTS -->
+            <div class="ehr-panel" data-panel="departments">
+              <h3>Departments</h3>
+              <div class="panel-sub">Synthetic department-level rollup — this week</div>
+              <table class="dept-table">
+                <thead><tr><th>Department</th><th>Patients</th><th>Avg. Wait</th><th>Change</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Dept">Emergency</td><td data-label="Patients">612</td><td data-label="Wait" class="flag">54m</td><td data-label="Change" class="flag">↑ 18%</td></tr>
+                  <tr><td data-label="Dept">Cardiology</td><td data-label="Patients">203</td><td data-label="Wait">21m</td><td data-label="Change">↑ 2%</td></tr>
+                  <tr><td data-label="Dept">Orthopedics</td><td data-label="Patients">178</td><td data-label="Wait">17m</td><td data-label="Change">↓ 1%</td></tr>
+                  <tr><td data-label="Dept">Primary Care</td><td data-label="Patients">340</td><td data-label="Wait">14m</td><td data-label="Change">↓ 3%</td></tr>
+                  <tr><td data-label="Dept">Radiology</td><td data-label="Patients">96</td><td data-label="Wait">22m</td><td data-label="Change">↑ 1%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ANALYTICS WORKSPACE -->
+            <div class="ehr-panel" data-panel="analytics">
+              <h3>Analytics Workspace</h3>
+              <div class="panel-sub">Investigating: ED wait times, by hour of day (synthetic)</div>
+              <div class="bar-chart">
+                <div class="bar" style="height:100%;"><div class="fill" style="height:31%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:40%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:50%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:69%;"></div></div>
+                <div class="bar peak" style="height:100%;"><div class="fill" style="height:87%;"></div></div>
+                <div class="bar peak" style="height:100%;"><div class="fill" style="height:100%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:83%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:63%;"></div></div>
+                <div class="bar" style="height:100%;"><div class="fill" style="height:43%;"></div></div>
+              </div>
+              <div class="bar-chart-labels">
+                <span>6a</span><span>8a</span><span>10a</span><span>12p</span><span>2p</span><span>4p</span><span>6p</span><span>8p</span><span>10p</span>
+              </div>
+              <p class="small-print" style="margin-top:10px;">Wait times climb sharply from 12pm and peak between 2–4pm — worth checking against staffing schedules and arrival volume for the same window.</p>
+              <hr class="hair">
+              <h3 style="font-size:16px;">Department breakdown</h3>
+              <table class="dept-table">
+                <thead><tr><th>Department</th><th>Patients</th><th>Avg. Wait</th><th>Change</th></tr></thead>
+                <tbody>
+                  <tr><td data-label="Dept">Emergency</td><td data-label="Patients">612</td><td data-label="Wait" class="flag">54m</td><td data-label="Change" class="flag">↑ 18%</td></tr>
+                  <tr><td data-label="Dept">Cardiology</td><td data-label="Patients">203</td><td data-label="Wait">21m</td><td data-label="Change">↑ 2%</td></tr>
+                  <tr><td data-label="Dept">Orthopedics</td><td data-label="Patients">178</td><td data-label="Wait">17m</td><td data-label="Change">↓ 1%</td></tr>
+                </tbody>
+              </table>
+              <hr class="hair">
+              <h3 style="font-size:16px;">Data dictionary (excerpt)</h3>
+              <ul class="spec-list">
+                <li><span>Avg. Wait</span><span>Arrival → provider-seen, in minutes</span></li>
+                <li><span>Encounter</span><span>One visit record, one department</span></li>
+                <li><span>ESI Level</span><span>Emergency Severity Index, 1 (most urgent) – 5</span></li>
+              </ul>
+            </div>
+
+            <!-- ASSIGNMENTS -->
+            <div class="ehr-panel" data-panel="assignments">
+              <h3>Analyst Assignments</h3>
+              <div class="panel-sub">Your scorecard</div>
+              <div class="grid-3" style="margin-bottom:28px;">
+                <div class="assignment-card">
+                  <span class="status open">OPEN</span>
+                  <h3>ED Wait Time Investigation</h3>
+                  <p>ED wait times have increased 18%. Leadership needs to understand why — and what to do about it.</p>
+                </div>
+                <div class="assignment-card">
+                  <span class="status locked">LOCKED</span>
+                  <h3>Readmission Risk Review</h3>
+                  <p>Unlocks after your first submitted findings.</p>
+                </div>
+                <div class="assignment-card">
+                  <span class="status locked">LOCKED</span>
+                  <h3>Staffing &amp; Volume Forecast</h3>
+                  <p>Unlocks after your first submitted findings.</p>
+                </div>
+              </div>
+
+              <div class="alert-banner">
+                <span class="icon">🚨</span>
+                <div><strong>ED Wait Time Investigation</strong><span>ED wait times have increased 18%. Investigate patient volume, arrival time, wait time, staffing, department, provider, admissions, discharges and time of day.</span></div>
+              </div>
+
+              <p class="small-print">Use the <strong>Analytics</strong> tab to look at the hourly wait-time chart and department breakdown before you write up your findings below.</p>
+
+              <form id="findings-form" style="margin-top:20px;">
+                <div class="field">
+                  <label for="f-findings">Findings</label>
+                  <textarea id="f-findings" rows="3" placeholder="What does the data show?"></textarea>
+                </div>
+                <div class="field">
+                  <label for="f-insights">Insights</label>
+                  <textarea id="f-insights" rows="3" placeholder="Why is this happening?"></textarea>
+                </div>
+                <div class="field">
+                  <label for="f-recs">Recommendations</label>
+                  <textarea id="f-recs" rows="3" placeholder="What should leadership do about it?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Findings</button>
+                <div id="findings-status" class="form-status"></div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <p class="small-print" style="margin-top:20px;">All names, patients, encounters and metrics on this page are synthetic and generated for demonstration purposes. Wumtech Health Network is a fictional organization. No real patient data or protected health information (PHI) is used or stored anywhere in this environment.</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">WHAT'S NEXT</div>
+        <h2>This simulation is the first mission in Wumtech Academy.</h2>
+        <p class="lede">Future missions add readmission-risk analysis, staffing forecasts, and a portfolio you can show employers.</p>
+      </div>
+      <a href="healthcare-analytics.html" class="btn btn-ghost">Learn About Healthcare Analytics</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span data-year></span> Wumtech Data Consulting Services</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="index.html">Home</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
