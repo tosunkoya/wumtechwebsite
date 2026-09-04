@@ -20,6 +20,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* Hero background video — custom fade loop (0.5s in, 0.5s out, requestAnimationFrame) */
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    var FADE_MS = 500;
+    var fadeRAF = null;
+
+    function setOpacity(v) { heroVideo.style.opacity = v; }
+
+    function fadeIn() {
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / FADE_MS, 1);
+        setOpacity(p);
+        if (p < 1) fadeRAF = requestAnimationFrame(step);
+      }
+      fadeRAF = requestAnimationFrame(step);
+    }
+
+    function fadeOutThenLoop() {
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var p = Math.min((ts - start) / FADE_MS, 1);
+        setOpacity(1 - p);
+        if (p < 1) {
+          fadeRAF = requestAnimationFrame(step);
+        } else {
+          setOpacity(0);
+          setTimeout(function () {
+            heroVideo.currentTime = 0;
+            var playPromise = heroVideo.play();
+            if (playPromise && playPromise.catch) playPromise.catch(function () {});
+            fadeIn();
+          }, 100);
+        }
+      }
+      fadeRAF = requestAnimationFrame(step);
+    }
+
+    heroVideo.addEventListener('loadedmetadata', function () {
+      var dur = heroVideo.duration || 0;
+      if (!dur || !isFinite(dur)) return;
+      var checkInterval = setInterval(function () {
+        if (heroVideo.duration && heroVideo.currentTime >= heroVideo.duration - (FADE_MS / 1000) - 0.05) {
+          clearInterval(checkInterval);
+          fadeOutThenLoop();
+        }
+      }, 50);
+    });
+
+    setOpacity(0);
+    var initialPlay = heroVideo.play();
+    if (initialPlay && initialPlay.then) {
+      initialPlay.then(fadeIn).catch(function () { /* autoplay blocked or source missing — hero still works without video */ });
+    } else {
+      fadeIn();
+    }
+  }
+
   /* Data-flow diagram — cycle the "on" node subtly (Data -> Analytics -> AI -> Insight -> Impact) */
   var flow = document.getElementById('flow-diagram');
   if (flow && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
