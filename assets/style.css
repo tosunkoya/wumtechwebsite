@@ -566,9 +566,9 @@ hr.hair{border:none; border-top:1px solid var(--line); margin:48px 0;}
 
 .hero-headline{
   font-family:var(--display); font-weight:400;
-  font-size:clamp(3.2rem, 15vw, 220px);
-  line-height:1.02; letter-spacing:-0.024em;
-  color:var(--ink); margin:0;
+  font-size:clamp(2.4rem, 6vw, 92px);
+  line-height:1.08; letter-spacing:-0.02em;
+  color:var(--ink); margin:0; max-width:920px;
 }
 .hero-main-inner .hero-headline{margin:0;}
 .hero-gradient-word{
