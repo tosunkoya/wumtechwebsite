@@ -3,29 +3,29 @@
    ============================================================ */
 
 :root{
-  --ink:        #f3f3f1;   /* foreground — off-white, 40 6% 95% */
-  --paper:      #05010e;   /* background — deep dark blue-purple, 260 87% 3% */
-  --warm:       #05010e;
-  --paper-2:    #0c0618;   /* alt section background, 260 60% 6% */
-  --paper-3:    #0a0616;   /* input / chip fill — recessed relative to --surface */
-  --surface:    #0e0a1e;   /* elevated card/panel surface */
-  --surface-2:  #16102a;   /* hover / active surface */
+  --ink:        #f3f3f1;   /* foreground — off-white */
+  --paper:      #040b15;   /* background — deep navy blue */
+  --warm:       #040b15;
+  --paper-2:    #091320;   /* alt section background — navy */
+  --paper-3:    #040910;   /* input / chip fill — recessed relative to --surface */
+  --surface:    #0b1322;   /* elevated card/panel surface — navy */
+  --surface-2:  #111a2c;   /* hover / active surface */
   --line:       rgba(243,243,241,0.12);
   --line-soft:  rgba(243,243,241,0.07);
   --text:       #f3f3f1;
-  --text-dim:   #d4d2ce;   /* hero-sub, 40 6% 82% */
+  --text-dim:   #d4d2ce;
   --text-faint: rgba(243,243,241,0.55);
 
-  --accent:       #6366f1;   /* indigo — primary accent */
-  --accent-bright:#818cf8;
-  --accent-wash:  rgba(99,102,241,0.14);
-  --gradient-2:   #a855f7;   /* purple */
-  --gradient-3:   #fcd34d;   /* amber */
+  --accent:       #f97316;   /* orange — primary brand accent */
+  --accent-bright:#fb923c;
+  --accent-wash:  rgba(249,115,22,0.14);
+  --gradient-2:   #1e3a8a;   /* navy blue */
+  --gradient-3:   #3b82f6;   /* lighter blue */
   --amber:      #f2b64a;   /* AI-Visibility "opportunity" flag */
   --amber-wash: rgba(242,182,74,0.14);
   --red-flag:   #f27561;
   --red-wash:   rgba(242,117,97,0.14);
-  --focus:      #818cf8;
+  --focus:      #fb923c;
 
   --display: "General Sans", "Arial Narrow", sans-serif;
   --body: "Geist Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -93,8 +93,8 @@ button{font-family:inherit;}
   position:relative;
   background-color:var(--paper);
   background-image:
-    radial-gradient(circle at 12% 8%, rgba(99,102,241,0.16) 0%, transparent 40%),
-    radial-gradient(circle at 92% 18%, rgba(252,211,77,0.08) 0%, transparent 38%),
+    radial-gradient(circle at 12% 8%, rgba(249,115,22,0.14) 0%, transparent 40%),
+    radial-gradient(circle at 92% 18%, rgba(59,130,246,0.10) 0%, transparent 38%),
     linear-gradient(var(--line-soft) 1px, transparent 1px),
     linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
   background-size: auto, auto, 44px 44px, 44px 44px;
@@ -477,8 +477,8 @@ section.tight{padding:56px 0;}
 .final-cta{
   text-align:center; padding:100px 0; background:var(--paper-2); color:#fff;
   background-image:
-    radial-gradient(circle at 50% 0%, rgba(99,102,241,0.22), transparent 55%),
-    radial-gradient(circle at 90% 100%, rgba(252,211,77,0.10), transparent 45%),
+    radial-gradient(circle at 50% 0%, rgba(249,115,22,0.20), transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(59,130,246,0.12), transparent 45%),
     linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
   background-size:auto, auto, 44px 44px, 44px 44px;
@@ -486,7 +486,7 @@ section.tight{padding:56px 0;}
 .final-cta h2{max-width:760px; margin:0 auto 18px; color:#fff;}
 .final-cta .lede{margin:0 auto 34px; color:#aab2c5;}
 .final-cta .eyebrow{color:var(--accent-bright); justify-content:center;}
-.final-cta .eyebrow::before{background:var(--accent-bright); box-shadow:0 0 0 4px rgba(99,102,241,0.22);}
+.final-cta .eyebrow::before{background:var(--accent-bright); box-shadow:0 0 0 4px rgba(249,115,22,0.22);}
 .final-cta .microcopy{color:#7a8399;}
 
 /* ---------- Footer ---------- */
@@ -572,7 +572,7 @@ hr.hair{border:none; border-top:1px solid var(--line); margin:48px 0;}
 }
 .hero-main-inner .hero-headline{margin:0;}
 .hero-gradient-word{
-  background-image: linear-gradient(to left, #6366f1, #a855f7, #fcd34d);
+  background-image: linear-gradient(to left, #1e3a8a, #3b82f6, #f97316);
   -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .hero-subtitle{
